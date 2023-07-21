@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "sci_fi_backend": {
+      "main": "src/sci_fi_backend/main.mo",
+      "type": "motoko"
+    },
+    "sci_fi_frontend": {
+      "dependencies": [
+        "sci_fi_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/sci_fi_frontend/src/index.html"
+      },
+      "source": [
+        "src/sci_fi_frontend/assets",
+        "dist/sci_fi_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
